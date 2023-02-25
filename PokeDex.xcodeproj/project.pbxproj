@@ -16,6 +16,10 @@
 		24C4AC0C29A9ECAE002DC59C /* PokeDexUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AC0B29A9ECAE002DC59C /* PokeDexUITestsLaunchTests.swift */; };
 		24C4AC1929A9EDFD002DC59C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4AC1829A9EDFD002DC59C /* HomeViewController.swift */; };
 		24C4AC1B29A9EE37002DC59C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C4AC1A29A9EE37002DC59C /* HomeViewController.xib */; };
+		24C4AC2329A9F1E7002DC59C /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4AC2229A9F1E7002DC59C /* SDWebImage */; };
+		24C4AC2629A9F200002DC59C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4AC2529A9F200002DC59C /* RxCocoa */; };
+		24C4AC2829A9F200002DC59C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4AC2729A9F200002DC59C /* RxRelay */; };
+		24C4AC2A29A9F200002DC59C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 24C4AC2929A9F200002DC59C /* RxSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C4AC2829A9F200002DC59C /* RxRelay in Frameworks */,
+				24C4AC2629A9F200002DC59C /* RxCocoa in Frameworks */,
+				24C4AC2A29A9F200002DC59C /* RxSwift in Frameworks */,
+				24C4AC2329A9F1E7002DC59C /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +191,12 @@
 			dependencies = (
 			);
 			name = PokeDex;
+			packageProductDependencies = (
+				24C4AC2229A9F1E7002DC59C /* SDWebImage */,
+				24C4AC2529A9F200002DC59C /* RxCocoa */,
+				24C4AC2729A9F200002DC59C /* RxRelay */,
+				24C4AC2929A9F200002DC59C /* RxSwift */,
+			);
 			productName = PokeDex;
 			productReference = 24C4ABE529A9ECAD002DC59C /* PokeDex.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +269,10 @@
 				Base,
 			);
 			mainGroup = 24C4ABDC29A9ECAD002DC59C;
+			packageReferences = (
+				24C4AC2129A9F1E7002DC59C /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				24C4AC2429A9F200002DC59C /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 24C4ABE629A9ECAD002DC59C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -640,6 +658,48 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		24C4AC2129A9F1E7002DC59C /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		24C4AC2429A9F200002DC59C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		24C4AC2229A9F1E7002DC59C /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C4AC2129A9F1E7002DC59C /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		24C4AC2529A9F200002DC59C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C4AC2429A9F200002DC59C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		24C4AC2729A9F200002DC59C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C4AC2429A9F200002DC59C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		24C4AC2929A9F200002DC59C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 24C4AC2429A9F200002DC59C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 24C4ABDD29A9ECAD002DC59C /* Project object */;
 }
